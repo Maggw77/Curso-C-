@@ -20,7 +20,7 @@ public Curso [] Cursos { get; set; }
 public Escuela(string nombre, int Ano , string pais, string ciudad) => (Nombre,AnodeCreacion,Pais,Ciudad) = (nombre,Ano,pais,ciudad); // metodo para imprimir un objeto completo
 
 public override string ToString() {
-    return $"Nombre: {Nombre}, Tipo de Escuela: {TipoEscuela}, Pais: {Pais} , Ciudad: {Ciudad}";
+    return $"Nombre: {Nombre}, Tipo de Escuela: {TipoEscuela}, Pais: {Pais} , Ciudad: {Ciudad}";// metodo para imprimir un objeto completo
 }
 
 
