@@ -1,6 +1,8 @@
 ﻿using System;
 using CoreEscuela.Entidades;
 using static System.Console; // Sirve para no tener que colocar System.ConsoleWriteLine = WriteLine
+
+using CoreEscuela.util;
 namespace CoreEscuela
 {
     class Program
@@ -11,19 +13,18 @@ namespace CoreEscuela
             
           var engine = new Escuelaengine ();
           engine.inicializar();
-
-        
-            WriteLine("=====================");
-            ImprimirCursosEscuela(engine.Escuela);
+          Printer.titulo("Bienvenidos a Platzi");
+          Printer.Beep();
+          ImprimirCursosEscuela(engine.Escuela);
 
 
         }
 
         private static void ImprimirCursosEscuela(Escuela myescuela)
         {
-            WriteLine("==============================");
-            WriteLine("Cursos de la escuela");
-            WriteLine("==============================");
+
+            
+            Printer.titulo("Cursos de la escuela");
             if (myescuela?.Cursos != null)
                 foreach (var curso in myescuela.Cursos)
                 {
