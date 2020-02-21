@@ -1,8 +1,8 @@
-
+using System.Collections.Generic;
 namespace CoreEscuela.Entidades
  {
 
-class Escuela 
+public class Escuela 
 {
 string nombre;
 public string Nombre { 
@@ -15,7 +15,7 @@ public string Pais { get; set; }
 public string  Ciudad { get; set; }
 public TiposEscuela TipoEscuela{ get; set; }
 
-public Curso [] Cursos { get; set; }
+public  List<Curso> Cursos { get; set; }
 
 public Escuela(string nombre, int Ano , string pais, string ciudad) => (Nombre,AnodeCreacion,Pais,Ciudad) = (nombre,Ano,pais,ciudad); // metodo para imprimir un objeto completo
 

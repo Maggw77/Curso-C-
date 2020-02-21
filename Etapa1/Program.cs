@@ -1,36 +1,20 @@
 ﻿using System;
 using CoreEscuela.Entidades;
 using static System.Console; // Sirve para no tener que colocar System.ConsoleWriteLine = WriteLine
-namespace etapa1
+namespace CoreEscuela
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var Myescuela = new Escuela("Platzi Academy", 2012, "Colombia", "Bogota"); // nuevo objeto
-            Myescuela.TipoEscuela = TiposEscuela.Secundaria;
-            Myescuela.Cursos = new Curso[] { // Segundo metodo para declarar un arreglo utilizando una clase "Curso"
-                new Curso(){Nombre = "401"},
-                new Curso(){Nombre = "501"},
-                new Curso(){Nombre = "601"},
-            };
+            
+            
+          var engine = new Escuelaengine ();
+          engine.inicializar();
 
-            var LiceoCentro = new Escuela("Liceo Centroamericano", 2000, "Guatemala", "Guatemala City"); // nuevo objeto
-            LiceoCentro.TipoEscuela = TiposEscuela.Primaria;
-
-            var LiceoCUM = new Escuela("Liceo CUM", 1986, "Brasil", "Rio de Janeiro"); // nuevo objeto
-            LiceoCUM.TipoEscuela = TiposEscuela.PreEscolar;
-
-
-            Curso[] arregloCursos2 =   { // Segundo metodo para declarar un arreglo utilizando una clase "Curso"
-                new Curso(){Nombre = "401",Jornada=tiposJornada.matutina},
-                new Curso(){Nombre = "501",Jornada=tiposJornada.vespertina},
-                new Curso(){Nombre = "601",Jornada=tiposJornada.nocturna},
-            };
-
-
-            ImprimirCursosEscuela(Myescuela);
-            WriteLine(LiceoCentro);
+        
+            WriteLine("=====================");
+            ImprimirCursosEscuela(engine.Escuela);
 
 
         }
